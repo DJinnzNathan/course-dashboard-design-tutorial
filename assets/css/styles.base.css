@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: var(--fw-base);
+  line-height: 1.2;
+}
+
+:root {
+  --fw-base: 400;
+  --fw-lg: 600;
+
+  --hi-primary: rgb(112, 140, 229);
+  --hi-primary-muted: rgb(201, 211, 242);
+  --hi-secondary: rgb(216, 203, 254);
+  --hi-tertiary: rgb(255, 212, 237);
+  --bg-default: rgb(255, 255, 255);
+  --bg-root: linear-gradient(
+    162.97deg,
+    var(--hi-tertiary) -7.25%,
+    var(--hi-secondary) 88.58%
+  );
+  --bg-container: rgba(255, 255, 255);
+
+  --fg-primary: rgb(53, 58, 74);
+  --fg-muted: rgb(157, 166, 194);
+  --fg-hi: rgb(248, 248, 248);
+
+  --bd-radius: 24px;
+
+  --sp-base: 24px;
+  --ps-sm-1: calc((5 / 6) * var(--sp-base));
+  --ps-sm-2: calc((4 / 6) * var(--sp-base));
+  --ps-sm-3: calc((3 / 6) * var(--sp-base));
+  --ps-sm-4: calc((2 / 6) * var(--sp-base));
+  --ps-sm-5: calc((1 / 6) * var(--sp-base));
+  --ps-sm-6: calc((0 / 6) * var(--sp-base));
+
+  --sp-lg-1: calc((1 + 1 / 6) * var(--sp-base));
+  --sp-lg-2: calc((1 + 2 / 6) * var(--sp-base));
+  --sp-lg-3: calc((1 + 3 / 6) * var(--sp-base));
+}
+
+body {
+  background: var(--bg-root);
+
+  display: grid;
+  place-content: center;
+
+  padding: var(--sp-base);
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+
+  color: var(--fg-primary);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 260fr 612fr 408fr;
+
+  width: 1280px;
+  max-width: 1280px;
+  aspect-ratio: 1280 / 800;
+  border-radius: var(--bd-radius);
+
+  background-color: var(--bg-default);
+  box-shadow: 16px 20px 93px -2px rgba(0, 0, 0, 0.25);
+}
